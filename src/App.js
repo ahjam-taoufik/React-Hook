@@ -1,14 +1,12 @@
-
 import './App.css';
-import AutoIncrement from './components/AutoIncrement';
-
+import FetchData from './components/FetchData';
 
 
 function App() {
    
   return (
     <div className="App">
-       <AutoIncrement/>
+           <FetchData/>
     </div>
   );
 }
