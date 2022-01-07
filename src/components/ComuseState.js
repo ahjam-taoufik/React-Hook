@@ -7,24 +7,23 @@ import React, { useState } from 'react'
 
 
 function ComuseState() {
-       const [person, setperson] = useState({firstName:'',lastName:''})
+       const [numbers, setNumber] = useState([])
 
-      
-const handlerFirstName=(e)=>{setperson({...person,firstName:e.target.value})}
-const handlerLastName=(e)=>{setperson({...person,lastName:e.target.value})}
+
+const addNumber=()=>{
+    setNumber([...numbers,{id:numbers.length, items:Math.floor(Math.random()*10)}])
+}
 
 
 
     return (
         
         <div> 
-
-           <input type='text' value={person.firstName} onChange={handlerFirstName} placeholder='first name'  />
-           <input type='text' value={person.lastName} onChange={handlerLastName} placeholder='last name'  />
-           <h3>first {person.firstName} </h3>
-           <h3>last  {person.lastName} </h3>
-         
-         </div>
+               <button onClick={addNumber}>add number</button>
+               <ul>
+                   {numbers.map((number)=> <li key={number.id}> {number.items}</li>    )}
+               </ul>
+        </div>
     )
 }
 
