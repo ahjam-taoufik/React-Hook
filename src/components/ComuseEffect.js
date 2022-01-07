@@ -3,23 +3,28 @@ import React, { useEffect, useState } from 'react'
    
 
 function ComuseEffect() {
-       const [count1, setcount] = useState(0)
-       const [count2, setcount2] = useState(0)
+       const [X, setX] = useState(0)
+       const [Y, setY] = useState(0)
 
- //  this Hook call every render and every update only count1 
+ 
+const mousePosition=(e)=>{
+    console.log('mouse event');
+    setX(e.clientX)
+    setY(e.clientY)
+}      
+
+
+
   useEffect(() =>{  
-      console.log('use effect rendering');     
-       document.title=`you are clicked ${count1}  `
-
+      console.log('use effect called');
+      document.addEventListener('mousemove',mousePosition)     
      },[])
 
 
 
     return (
          <>
-             
-          <button onClick={()=>{setcount(count1+1)}}>click me {count1} </button>
-          <button onClick={()=>{setcount2(count2+1)}}>click me2 {count2} </button>
+             X: {X} <br/> Y: {Y}
          </>
     )
 }
