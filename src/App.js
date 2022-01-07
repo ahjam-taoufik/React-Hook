@@ -1,6 +1,6 @@
 
 import './App.css';
-import Display from './components/Display'
+import AutoIncrement from './components/AutoIncrement';
 
 
 
@@ -8,7 +8,7 @@ function App() {
    
   return (
     <div className="App">
-        <Display/>
+       <AutoIncrement/>
     </div>
   );
 }
