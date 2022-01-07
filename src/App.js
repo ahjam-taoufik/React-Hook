@@ -1,13 +1,14 @@
 
 import './App.css';
-import ComuseState from './components/ComuseState';
+import ComuseEffect from './components/ComuseEffect';
+
 
 
 function App() {
    
   return (
     <div className="App">
-         <ComuseState/>
+        <ComuseEffect/>
     </div>
   );
 }
