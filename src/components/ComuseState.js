@@ -4,29 +4,31 @@
 import React, { useState } from 'react'
 
 
+
+
 function ComuseState() {
        const [count, setCount] = useState(0)
+
+
+       const incrementFive=()=>{
+            setCount(count=>count+1)
+            setCount(count=>count+1)
+            setCount(count=>count+1)
+
+       }
+
     return (
         <div> 
-           <button onClick={()=>setCount(count+1)}>Click me {count} </button>
+           <h3>Count : {count}</h3>
+           <button onClick={()=>setCount(count+1)}>Click me +1  </button>
+           <button onClick={()=>setCount(count-1)}>Click me -1  </button>
+           <button onClick={()=>setCount(0)}>Click me initial  </button>
+
+           <button onClick={incrementFive}>Click me  +3  </button>
          </div>
     )
 }
+
+
+
 export default ComuseState
-
-
-// function ComuseState() {
-//        const [count, setCount] = useState(0)
-     
-
-//        const countHnadler=()=>{
-//               setCount(count+1)
-//        }
-
-//     return (
-//         <div> 
-//            <button onClick={countHnadler}>Click me {count} </button>
-//          </div>
-//     )
-// }
-// export default ComuseState
