@@ -11,7 +11,7 @@ function ComuseEffect() {
       console.log('use effect rendering');     
        document.title=`you are clicked ${count1}  `
 
-     },[count1])
+     },[])
 
 
 
