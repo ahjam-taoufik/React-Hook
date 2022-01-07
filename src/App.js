@@ -1,6 +1,6 @@
 
 import './App.css';
-import ComuseEffect from './components/ComuseEffect';
+import Display from './components/Display'
 
 
 
@@ -8,7 +8,7 @@ function App() {
    
   return (
     <div className="App">
-        <ComuseEffect/>
+        <Display/>
     </div>
   );
 }

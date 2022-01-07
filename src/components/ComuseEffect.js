@@ -13,12 +13,15 @@ const mousePosition=(e)=>{
     setY(e.clientY)
 }      
 
-
-
   useEffect(() =>{  
       console.log('use effect called');
-      document.addEventListener('mousemove',mousePosition)     
+      document.addEventListener('mousemove',mousePosition)   
+     return ()=>{
+        document.removeEventListener('mousemove',mousePosition)
+     }
+
      },[])
+
 
 
 
