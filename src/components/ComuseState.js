@@ -7,24 +7,23 @@ import React, { useState } from 'react'
 
 
 function ComuseState() {
-       const [count, setCount] = useState(0)
+       const [person, setperson] = useState({firstName:'',lastName:''})
+
+      
+const handlerFirstName=(e)=>{setperson({...person,firstName:e.target.value})}
+const handlerLastName=(e)=>{setperson({...person,lastName:e.target.value})}
 
 
-       const incrementFive=()=>{
-            setCount(count=>count+1)
-            setCount(count=>count+1)
-            setCount(count=>count+1)
-
-       }
 
     return (
+        
         <div> 
-           <h3>Count : {count}</h3>
-           <button onClick={()=>setCount(count+1)}>Click me +1  </button>
-           <button onClick={()=>setCount(count-1)}>Click me -1  </button>
-           <button onClick={()=>setCount(0)}>Click me initial  </button>
 
-           <button onClick={incrementFive}>Click me  +3  </button>
+           <input type='text' value={person.firstName} onChange={handlerFirstName} placeholder='first name'  />
+           <input type='text' value={person.lastName} onChange={handlerLastName} placeholder='last name'  />
+           <h3>first {person.firstName} </h3>
+           <h3>last  {person.lastName} </h3>
+         
          </div>
     )
 }
