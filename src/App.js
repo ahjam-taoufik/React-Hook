@@ -1,19 +1,14 @@
 import React from "react";
 import "./App.css";
-import ParentComponent from "./components/ParentComponent";
-// import FetchData from "./components/FetchData";
-// import FetchingDatauseReducer from "./components/FetchingDatauseReducer";
-
-
+import CompuseMemo from "./components/CompuseMemo";
 
 
 function App() {
   
   return (
     <div className="App">
-    {/* <FetchingDatauseReducer/> */}
-      {/* <FetchData/> */}
-      <ParentComponent/>
+
+     <CompuseMemo/>
     </div>
   );
 }
