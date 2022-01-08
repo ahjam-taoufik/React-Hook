@@ -1,14 +1,13 @@
 import React from "react";
 import "./App.css";
-import CompuseMemo from "./components/CompuseMemo";
+import UseRefComp from "./components/UseRefComp";
 
 
 function App() {
   
   return (
     <div className="App">
-
-     <CompuseMemo/>
+       <UseRefComp/>
     </div>
   );
 }
