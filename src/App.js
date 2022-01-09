@@ -1,15 +1,13 @@
 import React from "react";
 import "./App.css";
-import DocumentTitle from "./components/DocumentTitle";
-import DocumentTitle2 from "./components/DocumentTitle2";
-
+import Counter from "./components/Counter";
 
 function App() {
   
+  
   return (
     <div className="App">
-       <DocumentTitle/>
-       <DocumentTitle2/>
+    <Counter/>
     </div>
   );
 }
