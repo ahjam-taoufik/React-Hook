@@ -1,27 +1,29 @@
 import React, { useState } from 'react'
 
 
-const initialState=['taoufik','ali']
+const initialState=[ {id:1,Fname:'toto1',Lname:'toto1'} ]
+   
+  
 
 function Render() {
  const [persons, setperson] = useState(initialState)
-console.log(persons);
+ 
+ console.log(persons);
+ 
+ const handlerPerson=()=>{
 
-const handlerPerson=()=>{
-
- const  newpersons=[...persons]
-   newpersons.push('toto')
-   newpersons.push('toto2')
-   setperson(newpersons)
-
+const persons2=[...persons,{id:2,Fname:'ttit2',Lname:'titi2'}]
+setperson(persons2)
+ 
 }
-
 
     return (
         <div>
               <button onClick={handlerPerson}>Add Person</button>
-
-              <div> {persons.map((pe,i)=> <h4 key={i}>{pe}</h4>)}</div>
+               <ul>
+                  {persons.map(person=><li key={person.id}>{person.Fname}</li>)}
+               </ul>
+            
         </div>
     )
 }
