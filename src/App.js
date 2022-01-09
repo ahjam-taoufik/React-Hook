@@ -1,13 +1,15 @@
 import React from "react";
 import "./App.css";
-import UseRefComp from "./components/UseRefComp";
+import DocumentTitle from "./components/DocumentTitle";
+import DocumentTitle2 from "./components/DocumentTitle2";
 
 
 function App() {
   
   return (
     <div className="App">
-       <UseRefComp/>
+       <DocumentTitle/>
+       <DocumentTitle2/>
     </div>
   );
 }
