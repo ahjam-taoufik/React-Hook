@@ -1,13 +1,14 @@
 import React from "react";
 import "./App.css";
-import UserForm from "./components/UserForm";
+import Render from "./components/Render";
+
 
 function App() {
   
 
   return (
     <div className="App">
-      <UserForm/>
+       <Render/>
     </div>
   );
 }
